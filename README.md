@@ -1,28 +1,72 @@
 # StudyTrack
 
-## Run Instructions
+StudyTrack is a student-focused web app to track study habits using an anonymous code, questionnaire scoring, progress history, and streak tracking.
 
-### Step 1 — Start MongoDB
-```bash
-brew services start mongodb-community
+## Tech Stack
+
+- Frontend: React + Vite
+- Backend: Node.js + Express
+- Database: MongoDB + Mongoose
+
+## Features
+
+- Anonymous student code (no login required)
+- Questionnaire-based habit scoring
+- Results view with score breakdown
+- Dashboard for progress history
+- Daily streak check-in tracker
+
+## Project Structure
+
+- `frontend` - React UI
+- `backend` - Express API + MongoDB models/routes
+
+## Environment Setup
+
+Create `backend/.env`:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=5002
 ```
 
-### Step 2 — Backend (Terminal 1)
-```bash
-cd backend
-npm install
-node server.js
-```
-Should show: MongoDB connected / Server running on http://localhost:5002
+## Install Dependencies
 
-### Step 3 — Frontend (Terminal 2)
+From project root:
+
 ```bash
-cd frontend
 npm install
+npm install --prefix backend
+npm install --prefix frontend
+```
+
+## Run (Single Command)
+
+From project root:
+
+```bash
 npm run dev
 ```
 
-Open: http://localhost:5173
+Then open frontend URL shown in terminal (usually `http://127.0.0.1:5173`).
 
-## Port
-Backend runs on port 5002. If you change it, update frontend/src/data/api.js line 1.
+## Production-Style Run
+
+Build frontend and serve from backend:
+
+```bash
+npm run start:prod
+```
+
+Open: `http://localhost:5002`
+
+## API Health Check
+
+```bash
+GET /api
+```
+
+## Notes
+
+- Do not commit `backend/.env`.
+- If backend port changes, update `frontend/src/data/api.js`.
