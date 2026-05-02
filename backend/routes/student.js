@@ -8,7 +8,9 @@ router.post('/new', async (req, res) => {
     do { code=genCode(); exists=await Student.findOne({code}); t++ } while(exists&&t<10)
     await Student.create({code})
     res.status(201).json({code})
-  } catch { res.status(201).json({code:genCode()}) }
+  } catch (err) {
+    res.status(503).json({ error: err.message || 'Database unavailable. Check MongoDB is running and MONGO_URI / Atlas IP whitelist.' })
+  }
 })
 router.post('/verify', async (req, res) => {
   try {

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="50%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="book" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <!-- soft circles -->
+  <circle cx="100" cy="120" r="180" fill="#ffffff" opacity="0.35"/>
+  <circle cx="1050" cy="680" r="220" fill="#ffffff" opacity="0.28"/>
+  <circle cx="980" cy="140" r="90" fill="#0ea5e9" opacity="0.12"/>
+  <!-- open book center-bottom -->
+  <g transform="translate(420 420)">
+    <path d="M0 40 L180 20 L180 200 L0 220 Z" fill="url(#book)" opacity="0.9"/>
+    <path d="M360 40 L180 20 L180 200 L360 220 Z" fill="#075985" opacity="0.95"/>
+    <path d="M180 20 L180 200" stroke="#e0f2fe" stroke-width="2" opacity="0.5"/>
+    <rect x="40" y="70" width="100" height="4" rx="2" fill="#e0f2fe" opacity="0.35"/>
+    <rect x="40" y="90" width="80" height="4" rx="2" fill="#e0f2fe" opacity="0.25"/>
+    <rect x="220" y="70" width="100" height="4" rx="2" fill="#bae6fd" opacity="0.4"/>
+    <rect x="220" y="90" width="90" height="4" rx="2" fill="#bae6fd" opacity="0.3"/>
+  </g>
+  <!-- pencil -->
+  <g transform="translate(780 360) rotate(25)">
+    <rect x="0" y="0" width="140" height="14" rx="3" fill="#fbbf24"/>
+    <rect x="0" y="0" width="28" height="14" rx="3" fill="#fde68a"/>
+    <polygon points="140,0 158,7 140,14" fill="#78716c"/>
+  </g>
+  <!-- clock simple -->
+  <g transform="translate(180 520)">
+    <circle cx="60" cy="60" r="52" fill="#fff" opacity="0.85"/>
+    <circle cx="60" cy="60" r="46" stroke="#0ea5e9" stroke-width="4" fill="none" opacity="0.5"/>
+    <line x1="60" y1="60" x2="60" y2="32" stroke="#0369a1" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="60" x2="82" y2="60" stroke="#0369a1" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- notebook lines -->
+  <g opacity="0.15" stroke="#0369a1" stroke-width="2">
+    <line x1="60" y1="200" x2="320" y2="200"/>
+    <line x1="60" y1="230" x2="280" y2="230"/>
+    <line x1="60" y1="260" x2="300" y2="260"/>
+  </g>
+</svg>
