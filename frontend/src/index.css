@@ -380,7 +380,6 @@ a:focus-visible {
   font-weight: 600;
 }
 
-/* —— Study Habit Tracker dashboard (mockup layout) —— */
 .study-dash {
   display: flex;
   min-height: 100vh;

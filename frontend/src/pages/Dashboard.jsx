@@ -154,9 +154,7 @@ export default function Dashboard({ go, code, clearCode }) {
       setHabitLog(next)
       try {
         localStorage.setItem(storageKey, JSON.stringify(next))
-      } catch {
-        /* ignore */
-      }
+      } catch {}
     },
     [storageKey]
   )
@@ -198,9 +196,7 @@ export default function Dashboard({ go, code, clearCode }) {
     try {
       await api(`/api/results/${code}`, { method: 'DELETE' })
       load()
-    } catch {
-      /* ignore */
-    }
+    } catch {}
   }
 
   const latest = history[0]
